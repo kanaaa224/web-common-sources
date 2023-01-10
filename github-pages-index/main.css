@@ -1,0 +1,17 @@
+/*
+    (c) 2022 kanaaa224. All rights reserved.
+*/
+
+@import '../global-layout-1-with-style-1.css';
+
+html {
+    body {
+        main {
+            article {
+                section {
+                    padding: 1rem 1.5rem;
+                }
+            }
+        }
+    }
+}
