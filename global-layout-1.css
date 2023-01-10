@@ -1,0 +1,62 @@
+/*
+    (c) 2023 kanaaa224. All rights reserved.
+*/
+
+@import 'global-base.css';
+
+:root {
+    --global-padding-inline: 15rem;
+
+    --main-gap: 1rem;
+
+    --header-block-size: 5rem;
+
+    --footer-block-size: 2.5rem;
+    --footer-font-size:  .75rem;
+
+    @media (width < 1000px) {
+        --global-padding-inline: 1rem;
+    }
+}
+
+html {
+    position: relative;
+
+    min-block-size: 100%;
+
+    body {
+        main {
+            padding: var(--header-block-size) var(--global-padding-inline) var(--footer-block-size); gap: var(--main-gap);
+
+            flex-direction: column;
+        }
+
+        header {
+            position: fixed; inset-block-start: 0;
+
+            block-size: var(--header-block-size); padding-inline: var(--global-padding-inline);
+
+            justify-content: space-between;
+        }
+
+        footer {
+            position: absolute; inset-block-end: 0;
+
+            inline-size: fit-content; block-size: var(--footer-block-size); margin-inline: auto;
+
+            p {
+                font-size: var(--footer-font-size);
+            }
+        }
+
+        main, header, footer {
+            display: flex;
+        }
+
+        header, footer {
+            inset-inline: 0;
+
+            align-items: center;
+        }
+    }
+}

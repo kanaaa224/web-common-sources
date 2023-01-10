@@ -1,0 +1,35 @@
+/*
+    (c) 2023 kanaaa224. All rights reserved.
+*/
+
+:root {
+    --html-font-size: 16px;
+
+    @media (width < 500px) {
+        --html-font-size: 14px;
+    }
+}
+
+*, *::before, *::after {
+    all: unset;
+
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    touch-action: manipulation;
+
+    font-size: var(--html-font-size);
+
+    head {
+        display: none;
+    }
+
+    body {
+        font-family: sans-serif;
+
+        user-select: none;
+    }
+}
